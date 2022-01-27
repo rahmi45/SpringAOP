@@ -4,6 +4,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import com.spring.configuration.SpringContainer;
 import com.spring.dao.PostDao;
+import com.spring.dao.PostService;
 //import com.spring.dao.Student;
 
 public class MainApp {
@@ -18,6 +19,9 @@ public class MainApp {
 		PostDao po = ann.getBean("postDaoImpl", PostDao.class);
 		
 		po.allPosts();
+		
+		PostService ps = ann.getBean("postServiceImpl", PostService.class);
+		ps.allPosts();
 		ann.close();
 
 	}

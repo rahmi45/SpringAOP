@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class DataBase {
 	
-	@Before("execution(public void allPosts())")
+	@Before("execution(void com.spring.dao.PostDao.allPosts())")
 	public void connectionDB() {
 		System.out.println("Connected !...");
 	}
