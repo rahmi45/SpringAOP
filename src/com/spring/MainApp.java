@@ -21,7 +21,7 @@ public class MainApp {
 		po.allPosts();
 		
 		PostService ps = ann.getBean("postServiceImpl", PostService.class);
-		ps.allPosts();
+		System.out.println(ps.allPosts());
 		ann.close();
 
 	}
