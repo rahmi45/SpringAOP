@@ -12,4 +12,10 @@ public class PostServiceImpl implements PostService{
 		
 	}
 
+	@Override
+	public String allLikes() {
+		
+		return "PostService......Likes";
+	}
+
 }

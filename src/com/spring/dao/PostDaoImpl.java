@@ -11,4 +11,11 @@ public class PostDaoImpl implements PostDao{
 		
 	}
 
+	@Override
+	public String allLikes() {
+
+		return "PostDoa......Likes";
+		
+	}
+
 }
