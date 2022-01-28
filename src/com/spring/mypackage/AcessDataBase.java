@@ -6,6 +6,8 @@ import org.springframework.stereotype.Component;
 public class AcessDataBase {
 	
 	public String getStudent() {
-		return "Name of Student is Rachid";
+		
+		throw new RuntimeException("NOOOOOOOOOOOOOOOOO...");
+		//return "Name of Student is Rachid";
 	}
 }
