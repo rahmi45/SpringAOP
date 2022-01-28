@@ -9,5 +9,9 @@ public interface PostDao {
 	public String allLikes(User user, int result);
 	
 	public void findDao();
+	
+	public void setId();
+	
+	public int getId();
 
 }

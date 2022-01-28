@@ -12,12 +12,21 @@ public class DataBase {
 	@Pointcut("execution(public * com.spring.dao.*.*(..))")
 	public void myPointCut() {}
 	
-	@Before("myPointCut()")
+	@Pointcut("execution(public * com.spring.dao.*.set*())")
+	public void mySetter() {}
+	
+	@Pointcut("execution(public * com.spring.dao.*.get*())")
+	public void myGetter() {}
+	
+	@Pointcut("myPointCut() && !(myGetter() || mySetter())")
+	public void finalPointCut() {}
+	
+	@Before("finalPointCut()")
 	public void connectionDB() {
 		System.out.println("Connected !...");
 	}
 	
-	@Before("myPointCut()")
+	@Before("finalPointCut()")
 	public void logIn() {
 		System.out.println("Log In.............true!");
 	}

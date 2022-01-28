@@ -6,6 +6,8 @@ import com.spring.model.User;
 
 @Component
 public class PostDaoImpl implements PostDao{
+	
+	private int id;
 
 	@Override
 	public void allPosts(User user) {
@@ -15,7 +17,6 @@ public class PostDaoImpl implements PostDao{
 
 	@Override
 	public String allLikes(User user, int result) {
-
 		return "PostDoa......Likes";
 		
 	}
@@ -24,6 +25,18 @@ public class PostDaoImpl implements PostDao{
 	public void findDao() {
 		System.out.println("Find Dao.....");
 		
+	}
+
+	@Override
+	public void setId() {
+		System.out.println("this is set ID");
+		
+	}
+
+	@Override
+	public int getId() {
+		System.out.println("this is get ID");
+		return 0;
 	}
 
 }

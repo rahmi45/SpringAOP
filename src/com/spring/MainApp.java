@@ -23,12 +23,21 @@ public class MainApp {
 		int re =0;
 		System.out.println(po.allLikes(u, re));
 		po.findDao();
+		System.out.println("****************************************");
+		po.setId();
+		po.getId();
+		System.out.println("****************************************");
+		
 		System.out.println("/////////////////////////////////////////");
 		
 		PostService ps = ann.getBean("postServiceImpl", PostService.class);
 		System.out.println(ps.allPosts(u, re));
 		System.out.println(ps.allLikes(u));
 		ps.startService();
+		System.out.println("****************************************");
+		ps.setName();
+		ps.getName();
+		System.out.println("****************************************");
 		
 		ann.close();
 
