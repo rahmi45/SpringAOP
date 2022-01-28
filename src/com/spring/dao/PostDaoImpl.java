@@ -20,4 +20,10 @@ public class PostDaoImpl implements PostDao{
 		
 	}
 
+	@Override
+	public void findDao() {
+		System.out.println("Find Dao.....");
+		
+	}
+
 }
