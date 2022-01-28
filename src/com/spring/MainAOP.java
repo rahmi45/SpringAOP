@@ -17,7 +17,7 @@ public class MainAOP {
 //		person.getData();
 		
 		AcessDataBase ac = ann.getBean("acessDataBase", AcessDataBase.class); 
-		System.out.println(ac.getStudent());
+		ac.getStudent();
 		
 		
 		ann.close();
