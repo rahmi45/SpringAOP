@@ -6,6 +6,7 @@ import com.spring.configuration.SpringContainer;
 import com.spring.dao.PostDao;
 import com.spring.dao.PostService;
 //import com.spring.dao.Student;
+import com.spring.model.User;
 
 public class MainApp {
 
@@ -17,15 +18,16 @@ public class MainApp {
 //		st.myData();
 		
 		PostDao po = ann.getBean("postDaoImpl", PostDao.class);
-		
-		po.allPosts();
-		System.out.println(po.allLikes());
+		User u = new User();
+		po.allPosts(u);
+		int re =0;
+		System.out.println(po.allLikes(u, re));
 		
 		System.out.println("/////////////////////////////////////////");
 		
 		PostService ps = ann.getBean("postServiceImpl", PostService.class);
-		System.out.println(ps.allPosts());
-		System.out.println(ps.allLikes());
+		System.out.println(ps.allPosts(u, re));
+		System.out.println(ps.allLikes(u));
 		
 		ann.close();
 
